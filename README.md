@@ -7,6 +7,10 @@ Other things to include:
   - **Technology stack**: Indicate the technological nature of the software, including primary programming language(s) and whether the software is intended as standalone or as a module in a framework or other ecosystem.
   - **Status**:  Alpha - [CHANGELOG](CHANGELOG.md).
   - **ODOT: Links to production or demo instances**
+  
+  test links
+  - http://localhost:8080/actuator/health
+  - http://localhost:8080/api/greeting
 
 **Screenshot**: ODOT: place a screenshot after the description; e.g.,
 

@@ -13,7 +13,7 @@
 
 	<groupId>com.swaggyj</groupId>
 	<artifactId>getting-started</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>getting-started</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -40,6 +40,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<!-- actuator -->
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-actuator</artifactId>
+      </dependency>
 
 		<!-- boilerplate -->
 		<dependency>
