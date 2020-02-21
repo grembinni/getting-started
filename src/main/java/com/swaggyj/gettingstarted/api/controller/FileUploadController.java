@@ -1,6 +1,5 @@
 package com.swaggyj.gettingstarted.api.controller;
 
-import java.io.IOException;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +32,7 @@ public class FileUploadController implements FileUploadApi {
 		this.storageService = storageService;
 	}
 
+	@Override
 	@PostMapping("/api/file")
 	public String handleFileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
 
@@ -48,8 +48,9 @@ public class FileUploadController implements FileUploadApi {
 		return ResponseEntity.notFound().build();
 	}
 
+	@Override
 	@GetMapping("/api/file")
-	public String listUploadedFiles(Model model) throws IOException {
+	public String listUploadedFiles(Model model) {
 
 		model.addAttribute("files",
 				storageService.loadAll()
@@ -61,6 +62,7 @@ public class FileUploadController implements FileUploadApi {
 		return "uploadFile";
 	}
 
+	@Override
 	@GetMapping("/api/file/{filename:.+}")
 	@ResponseBody
 	public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
