@@ -20,7 +20,7 @@ public class QuoteController implements QuoteApi {
 	}
 
 	@Override
-	@GetMapping("/quote")
+	@GetMapping("/api/quote")
 	public Quote quote() {
 		return quoteCapi.getQuote();
 	}
